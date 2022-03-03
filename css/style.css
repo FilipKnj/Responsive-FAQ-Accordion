@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+html {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(180deg, #af67e9, #6565e7);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 9em 1em 2em;
+  width: 90%;
+  min-width: 360px;
+}
+.card h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.ilusstration {
+  margin-bottom: -7em;
+  z-index: 1;
+}
+
+.ilusstration img:nth-of-type(1) {
+  position: relative;
+}
+
+.ilusstration img:nth-of-type(2) {
+  margin-top: -5em;
+}
+
+.ill-desk {
+  display: none;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 1em 0;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  border-bottom: 1px solid #787887;
+}
+li h2 {
+  font-weight: 400;
+  text-align: start;
+  font-size: 1.1em;
+  color: #1d1e35;
+}
+li p {
+  font-size: 0.8em;
+  padding: 0 1em 1em 0;
+  color: #787887;
+  font-weight: 400;
+  line-height: 1.4em;
+  display: none;
+}
+
+.active h2 {
+  font-weight: 700;
+}
+.active p {
+  display: block;
+}
+.active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    min-height: 100vh;
+    margin-top: 0;
+  }
+
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    max-width: 910px;
+    height: 420px;
+  }
+
+  ul {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    padding: 2rem 2rem 0rem 1rem;
+  }
+
+  .ilusstration {
+    display: none;
+  }
+
+  .ill-desk {
+    display: block;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 90%;
+    position: relative;
+    top: 6%;
+    left: -3%;
+  }
+  .ill-desk img {
+    width: 100%;
+    height: auto;
+  }
+  .ill-desk .desk-bg {
+    margin-bottom: 10rem;
+    position: absolute;
+    left: 0;
+  }
+}
